@@ -9,12 +9,12 @@ function clickHeadphones() {
     button.dispatchEvent(new MouseEvent('mouseover'));
     button.dispatchEvent(new MouseEvent('mouseenter'));
     button.click();
-    return setTimeout(getLink, 1500)
+    return setTimeout(getLink, 1500);
 }
 
 function getLink() {
     linkToMP3 = window.document.querySelector('[title="recaptcha challenge"]').contentWindow.document.getElementsByClassName("rc-audiochallenge-tdownload-link")[0].href;
-    console.log(linkToMP3)
+    console.log(linkToMP3);
 }
 
 
