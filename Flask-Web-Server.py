@@ -15,8 +15,9 @@ def main():
         print("The url is : " + data)
         sound_file = urllib.request.URLopener()
         sound_file.retrieve(data, "transcript.mp3")
-        jsonResp = {'answer': recognize()}
-        return jsonify(jsonResp)
+        response = jsonify({'answer': recognize()})
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
 
 
 def recognize():
