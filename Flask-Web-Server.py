@@ -11,11 +11,11 @@ def main():
     if request.method == "GET":
         return "Please use a post request!"
     if request.method == "POST":
+        return "gio"
         data = request.data.decode("utf-8")
         print("The url is : " + data)
         sound_file = urllib.request.URLopener()
         sound_file.retrieve(data, "transcript.mp3")
-
         jsonResp = {'answer': recognize()}
         return jsonify(jsonResp)
 
