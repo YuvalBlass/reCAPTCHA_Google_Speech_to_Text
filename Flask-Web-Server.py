@@ -11,7 +11,6 @@ def main():
     if request.method == "GET":
         return "Please use a post request!"
     if request.method == "POST":
-        return "gio"
         data = request.data.decode("utf-8")
         print("The url is : " + data)
         sound_file = urllib.request.URLopener()
@@ -33,10 +32,9 @@ def recognize():
     r = sr.Recognizer()
     with sr.AudioFile(AUDIO_FILE) as source:
         audio = r.record(source)  # read the entire audio file
-
-        print("Transcription: " + r.recognize_google(audio))
-
-    return r.recognize_google(audio)
+        final_text = r.recognize_google(audio)
+        print("Transcription: " + final_text)
+        return final_text
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port='5000', debug=False)
