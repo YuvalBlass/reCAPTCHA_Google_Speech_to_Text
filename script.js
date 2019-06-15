@@ -1,4 +1,4 @@
-var linkToMP3 = ""
+var linkToMP3 = "";
 
 document.querySelector('[role="presentation"]').contentWindow.document.getElementById("recaptcha-anchor").click();
 
@@ -23,8 +23,8 @@ fetch("http://127.0.0.1:5000/", {"mode":'no-cors', "method":"POST", "body":linkT
     return response.json();
   })
   .then(function(myJson) {
-    final_answer = myJson["answer"]
-    console.log(final_answer)
+    final_answer = myJson["answer"];
+    console.log(final_answer);
 
     document.querySelector('[title="recaptcha challenge"]').contentWindow.document.getElementById('audio-response').value = final_answer;
     window.document.querySelector('[title="recaptcha challenge"]').contentWindow.document.getElementById("recaptcha-verify-button").click();
