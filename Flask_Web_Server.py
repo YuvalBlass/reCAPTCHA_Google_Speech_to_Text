@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-import time
 import speech_recognition as sr
 from pydub import AudioSegment
 import urllib.request
