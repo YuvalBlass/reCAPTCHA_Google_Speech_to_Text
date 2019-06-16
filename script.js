@@ -13,7 +13,7 @@ function clickHeadphones() {
 function getLink() {
     linkToMP3 = window.document.querySelector('[title="recaptcha challenge"]').contentWindow.document.getElementsByClassName("rc-audiochallenge-tdownload-link")[0].href;
     console.log(linkToMP3);
-    return setTimeout(fetch_and_get_the_job_done, 1000)
+    return setTimeout(fetch_and_get_the_job_done, 1000);
 }
 
 
@@ -31,7 +31,4 @@ function fetch_and_get_the_job_done() {
   });
 }
 
-setTimeout(clickHeadphones, 1500)
-
-
-
+setTimeout(clickHeadphones, 1500);
